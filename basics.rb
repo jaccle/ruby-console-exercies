@@ -58,18 +58,23 @@
 
 # SIMPLE ASCII ART
 
-def art (height)
-space = height
-star = 1
+def art ()
+    puts "What character would you like to use?"
+    char = gets.split
+    puts char
+    puts "How many rows would you like?"
+    height = gets.to_i
+    space = height
+    star = 1
     for i in 0..height
-        puts ' '*space + '*'*star
+        fix = char*star*""
+        puts ' '*space + fix.to_s
         space -= 1
         star += 2
     end
 end
 
-art(10)
-
+art
 # # REVERSE A STRING
 
 # def reverse (str)
